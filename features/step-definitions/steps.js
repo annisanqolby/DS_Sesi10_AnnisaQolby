@@ -16,7 +16,7 @@ Then(/^annisa should see home page$/,async () => {
    await homepage.validateHomePage()
 })
 
-Then(/^annisa should see error "(.*)" $/,async (message) => {
+Then(/^annisa should see error "(.*)"$/,async (message) => {
    await loginpage.validateLockedOutUserError(message)
 })
 

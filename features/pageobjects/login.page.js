@@ -7,7 +7,7 @@ class LoginPage extends Page {
     get fieldUsername () {return $('#user-name');}
     get fieldPassword () {return $('#password');}
     get buttonLogin () {return $('#login-button');}
-    errorLockedOutUser = (dynamicMessage) => $('//h3[text()="${dynamicMessage}"]')
+    errorLockedOutUser = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`)
 
     
     async login (username) {
