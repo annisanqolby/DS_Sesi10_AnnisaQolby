@@ -8,7 +8,7 @@ class LoginPage extends Page {
     get fieldPassword () {return $('#password');}
     get buttonLogin () {return $('#login-button');}
     errorLockedOutUser = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`)
-
+    // errornoUser = (errormessage) => $(`//h3[text()="${errormessage}"]`)
     
     async login (username) {
         await this.fieldUsername.waitForDisplayed({ timeout: 2500});
@@ -21,6 +21,8 @@ class LoginPage extends Page {
         await this.errorLockedOutUser(message).waitForDisplayed({ timeout: 2500 })
         await expect(this.errorLockedOutUser(message)).toBeDisplayed()
     }
+
+    
     open () {
         return super.open('/');
     }
