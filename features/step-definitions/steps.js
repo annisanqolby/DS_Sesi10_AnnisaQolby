@@ -23,11 +23,15 @@ Then(/^annisa should see error "(.*)"$/,async (message) => {
 })
 
 Then(/^annisa should see problem page$/,async () => {
-   await problemPage.validateProblemPage()
+   await problemPage.validateproblemPage()
 })
 
 Then(/^annisa should see visual User page$/,async () => {
-   await visualUserPage.validatevisualUserPage()
+   await visualUserPage.validatevisualuserPage()
+})
+
+Then(/^annisa should see error "(.*)"$/,async (message) => {
+   await loginpage.validatenoUserError(message)
 })
 
 
