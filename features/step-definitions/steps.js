@@ -31,8 +31,20 @@ Then(/^annisa should see visual User page$/,async () => {
 })
 
 Then(/^annisa should see error "(.*)"$/,async (message) => {
-   await loginpage.validatenoUserError(message)
+   if (message == 'no_user') {
+      await loginpage.validatenoUserError(message)
+   }  else if  (message == 'locked_out_user') {
+      await loginpage.validateLockedOutUserError(message)
+   }  else {
+      throw new Error('message tidak ditemukan')
+   }
 })
 
+
+
+
+// Then(/^annisa should see error "(.*)"$/,async (message) => {
+//    await loginpage.validatenoUserError(message)
+// })
 
 
