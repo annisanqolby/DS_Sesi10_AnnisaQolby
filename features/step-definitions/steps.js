@@ -18,13 +18,6 @@ Then(/^annisa should see home page$/,async () => {
    await homepage.validateHomePage()
 })
 
-Then(/^annisa should see error "(.*)"$/,async (message) => {
-   if (message == 'Epic sadface: Username and password do not match any user in this service') {
-      await loginpage.validatenoUserError(message)
-   }  else if  (message == 'Epic sadface: Sorry, this user has been locked out.') {
-   }
-})
-
 Then(/^annisa should see problem page$/,async () => {
    await problemPage.validateproblemPage()
 })
@@ -41,5 +34,6 @@ Then(/^annisa should see error "(.*)"$/,async (message) => {
    }  else {
       throw new Error('message tidak ditemukan')
    }
-})
+}) 
+
 

@@ -1,0 +1,7 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Swag Labs - Login: As a no_user, i should get error message","","0","0","4","0","0"
+"","Swag Labs - Login: As a locked_out_user, i should get error message","","0","0","4","0","0"
+"","Swag Labs - Login: As a standard_user, i want to login successfully","","0","0","4","0","0"
+"","Swag Labs - Login: As a visual_user, i want to login successfully","","0","0","4","0","0"
+"","Swag Labs - Login: As a no_password, i should get error message","","0","1","3","0","0"
+"","Swag Labs - Login: As a problem_user, i want to login successfully","","0","0","4","0","0"

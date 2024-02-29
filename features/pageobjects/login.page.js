@@ -26,7 +26,6 @@ class LoginPage extends Page {
         await this.errornoUser(message).waitForDisplayed({ timeout: 2500 })
         await expect(this.errornoUser(message)).toBeDisplayed()
     }
-
     
     open () {
         return super.open('/');
