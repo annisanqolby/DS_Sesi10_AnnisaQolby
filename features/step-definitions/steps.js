@@ -15,17 +15,14 @@ When(/^annisa login with "(.*)" credentials$/,async (username) => {
 })
 
 Then(/^annisa should see home page$/,async () => {
-   if (message == 'Epic sadface: Username and password do not match any user in this service') {
-      await loginpage.validatenoUserError(message)
-   }  else if  (message == 'Epic sadface: Sorry, this user has been locked out.') {
-      await loginpage.validateLockedOutUserError(message)
-   }  else {
-      throw new Error('message tidak ditemukan')
-   }
+   await homepage.validateHomePage()
 })
 
 Then(/^annisa should see error "(.*)"$/,async (message) => {
-   await loginpage.validateLockedOutUserError(message)
+   if (message == 'Epic sadface: Username and password do not match any user in this service') {
+      await loginpage.validatenoUserError(message)
+   }  else if  (message == 'Epic sadface: Sorry, this user has been locked out.') {
+   }
 })
 
 Then(/^annisa should see problem page$/,async () => {
@@ -37,20 +34,12 @@ Then(/^annisa should see visual User page$/,async () => {
 })
 
 Then(/^annisa should see error "(.*)"$/,async (message) => {
-   if (message == 'no_user') {
+   if (message == 'Epic sadface: Username and password do not match any user in this service') {
       await loginpage.validatenoUserError(message)
-   }  else if  (message == 'locked_out_user') {
+   }  else if  (message == 'Epic sadface: Sorry, this user has been locked out.') {
       await loginpage.validateLockedOutUserError(message)
    }  else {
       throw new Error('message tidak ditemukan')
    }
 })
-
-
-
-
-// Then(/^annisa should see error "(.*)"$/,async (message) => {
-//    await loginpage.validatenoUserError(message)
-// })
-
 
