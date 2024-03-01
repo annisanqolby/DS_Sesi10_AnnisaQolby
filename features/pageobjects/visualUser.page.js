@@ -19,4 +19,3 @@ module.exports = new visualUserPage();
 
 
 
-//<div id="shopping_cart_container" class="shopping_cart_container visual_failure"><a class="shopping_cart_link"></a></div> */}
